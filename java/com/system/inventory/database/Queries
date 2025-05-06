@@ -1,0 +1,95 @@
+
+CREATE DATABASE inventory;
+
+CREATE TABLE supplier (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(100),
+    contact VARCHAR(100),
+    address VARCHAR(100)
+);
+
+CREATE TABLE series (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(100)
+);
+
+CREATE TABLE brands (
+    id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(100),
+    series INT,
+    FOREIGN KEY (series) REFERENCES series(id) ON DELETE CASCADE
+);
+
+CREATE TABLE supplier_brands (
+    supplier_id INT,
+    brand_id INT,
+    PRIMARY KEY (supplier_id, brand_id),
+    FOREIGN KEY (supplier_id) REFERENCES supplier(id) ON DELETE CASCADE,
+    FOREIGN KEY (brand_id) REFERENCES brands(id) ON DELETE CASCADE
+);
+
+CREATE TABLE accounts (
+    id int NOT NULL PRIMARY KEY,
+    position varchar(100),
+    username varchar(100) UNIQUE NOT NULL,
+    password varchar(100) NOT NULL
+    );
+
+CREATE TABLE staff (
+    id int NOT NULL PRIMARY KEY,
+    last_name varchar(100) NOT NULL,
+    first_name varchar(100) NOT NULL,
+    middle_name varchar(100),
+    suffix varchar(10),
+    age int NOT NULL,
+    gender ENUM('F', 'M') NOT NULL,
+    birthdate varchar(100) NOT NULL,
+    contact varchar(100) NOT NULL,
+    address varchar(100) NOT NULL,
+    FOREIGN KEY (id) REFERENCES accounts(id) ON DELETE CASCADE
+    );
+
+CREATE TABLE stocks (
+    id int NOT NULL PRIMARY KEY,
+	brand varchar(100) NOT NULL,
+    series varchar(100) NOT NULL,
+    com varchar(100) NOT NULL,
+    sizes int NOT NULL,
+    qty int NOT NULL,
+    price double(10,2),
+    status varchar(100) NOT NULL,
+    supplier varchar(100) NOT NULL
+	);
+
+CREATE TABLE transactions (
+    id int NOT NULL PRIMARY KEY,
+    type varchar(100) NOT NULL,
+    name varchar(100) NOT NULL,
+    supplier_name varchar(100) NOT NULL,
+    brand varchar(100) NOT NULL,
+    series varchar(100) NOT NULL,
+    qty int NOT NULL,
+    price double (10, 2),
+    transaction_date date NOT NULL
+    );
+
+
+INSERT INTO accounts (id, position, username, password)
+VALUES (0865264, 'Manager', 'filemon', '123');
+
+
+INSERT INTO staff (id, last_name, first_name, middle_name, suffix, age, gender, birthdate, contact, address)
+VALUES (0865264, 'Galanida', 'Filemon', 'Leornas', 'Jr.', 23, 'M', '12/30/2001', '09120703803', 'Malaybalay City');
+
+INSERT INTO transactions (id, type, name, supplier_name, brand, series, qty, price, transaction_date)
+VALUES (0572628, 'Stock In', 'Filemon', ' ', 'Nike', 'AirForce 1', 10000, 0.0, '2025-04-01'),
+        (0591734, 'Stock out', 'Filemon', ' ', 'Nike', 'AirForce 1', 5000, 0.0, '2025-04-30'),
+        (0528534, 'Stock In', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 8000, 0.0, '2025-02-01'),
+        (0583752, 'Stock out', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 2000, 0.0, '2025-02-28'),
+        (0556731, 'Stock In', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 10000, 0.0, '2025-03-01'),
+        (0555551, 'Stock out', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 4000, 0.0, '2025-03-30'),
+        (0566641, 'Stock In', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 15000, 0.0, '2025-01-01'),
+        (0777421, 'Stock out', 'Filemon', ' ', 'Adidas', 'Harden Volume 9', 10000, 0.0, '2025-01-30');
+
+
+

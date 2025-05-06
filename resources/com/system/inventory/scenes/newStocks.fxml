@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="308.0" prefWidth="624.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.system.inventory.controller.newStocksController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#ffffff00" height="269.0" layoutX="14.0" layoutY="18.0" stroke="#ababab" strokeType="INSIDE" width="597.0" />
+      <AnchorPane layoutX="26.0" layoutY="40.0" prefHeight="194.0" prefWidth="574.0" style="-fx-background-color: #fefefa; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <HBox layoutX="22.0" layoutY="54.0" prefHeight="41.0" prefWidth="530.0" spacing="35.0">
+               <children>
+                  <VBox prefHeight="41.0" prefWidth="120.0">
+                     <children>
+                        <Label text="Select Brand">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="brandChoiceBox" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="166.0">
+                     <children>
+                        <Label text="Select Series">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="seriesChoiceBox" prefHeight="26.0" prefWidth="173.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="174.0">
+                     <children>
+                        <Label text="Select Supplier">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="supplierChoiceBox" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="101.0" layoutY="118.0" prefHeight="41.0" prefWidth="372.0" spacing="25.0">
+               <children>
+                  <VBox prefHeight="41.0" prefWidth="68.0">
+                     <children>
+                        <Label text="Quantity">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="qtyField" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="88.0">
+                     <children>
+                        <Label text="Price">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="priceField" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="104.0">
+                     <children>
+                        <Label text="Category">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="forChoiceBox" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="38.0">
+                     <children>
+                        <Label text="Size">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sizeField" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="5.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #f0f0f0;">
+         <children>
+            <Label layoutX="8.0" text="New Stock">
+               <font>
+                  <Font name="Lexend Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="209.0" layoutY="252.0" mnemonicParsing="false" onAction="#addButton" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #101d68;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Lexend Regular" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="306.0" layoutY="252.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #960606;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Lexend Regular" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

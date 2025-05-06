@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="600.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.system.inventory.controller.EditStocksController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="503.0" layoutX="12.0" layoutY="25.0" stroke="#ababab" strokeType="INSIDE" width="576.0" />
+      <AnchorPane layoutX="222.0" layoutY="12.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: #f0f0f0;">
+         <children>
+            <Label layoutX="6.0" layoutY="1.0" text="Update Stock">
+               <font>
+                  <Font name="Lexend Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="22.0" layoutY="46.0" prefHeight="428.0" prefWidth="557.0" style="-fx-background-color: #fefefa; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.6705882549285889" green="0.6705882549285889" blue="0.6705882549285889" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="Stock Information :">
+               <font>
+                  <Font name="Lexend Regular" size="12.0" />
+               </font>
+            </Label>
+            <VBox layoutX="22.0" layoutY="55.0" prefHeight="38.0" prefWidth="100.0">
+               <children>
+                  <Label text="ID No.">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <HBox layoutX="21.0" layoutY="105.0" prefHeight="41.0" prefWidth="520.0" spacing="20.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Brand">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="brandField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="162.0">
+                     <children>
+                        <Label text="Series">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="seriesField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="219.0">
+                     <children>
+                        <Label text="Supplier">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="supplierField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="21.0" layoutY="168.0" prefHeight="39.0" prefWidth="520.0" spacing="30.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Quantity">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="qtyField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="38.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Price">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="priceField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="38.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Category">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="categoryField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="41.0" prefWidth="133.0">
+                     <children>
+                        <Label text="Sizes">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sizesField" alignment="CENTER" editable="false" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                           <font>
+                              <Font name="Lexend Regular" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Line endX="423.0" layoutX="117.0" layoutY="238.0" startX="-100.0" stroke="#ababab" />
+            <HBox layoutX="148.0" layoutY="248.0" prefHeight="24.0" prefWidth="266.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#stockInButton" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #101d68;" text="Stock In" textFill="WHITE">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#stockOutButton" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #101d68;" text="Stock Out" textFill="WHITE">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#newPriceButton" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #101d68;" text="New Price" textFill="WHITE">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <Line endX="423.0" layoutX="119.0" layoutY="282.0" startX="-100.0" stroke="#ababab" />
+            <VBox fx:id="stockIn" layoutX="222.0" layoutY="339.0" prefHeight="39.0" prefWidth="114.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="117.0" text="Enter Qty">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stockInField" alignment="CENTER" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <Label fx:id="labelButton" alignment="CENTER" layoutX="184.0" layoutY="303.0" prefHeight="19.0" prefWidth="190.0">
+               <font>
+                  <Font name="Lexend Regular" size="15.0" />
+               </font>
+            </Label>
+            <VBox fx:id="stockOut" layoutX="222.0" layoutY="339.0" prefHeight="39.0" prefWidth="114.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="117.0" text="Enter Qty">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stockOutField" alignment="CENTER" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox fx:id="newPrice" layoutX="222.0" layoutY="339.0" prefHeight="39.0" prefWidth="114.0" visible="false">
+               <children>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="117.0" text="Enter New Price">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="newPriceField" alignment="CENTER" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                     <font>
+                        <Font name="Lexend Regular" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="224.0" layoutY="492.0" prefHeight="24.0" prefWidth="154.0" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateButton" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #101d68;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Lexend Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cancelButton" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #960606;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Lexend Regular" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
